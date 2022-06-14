@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Gym Buddy</string>
+    <string name="content_description_tools">Tools</string>
+    <string name="content_description_diet">Diet</string>
+    <string name="content_description_exercises">Exercises</string>
+    <string name="content_description_weekly_routine">Weekly Routine</string>
+    <string name="content_description_gym_buddy">Gym Buddy</string>
+</resources>
