@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         btn3 = (Button) findViewById(R.id.btn3);
         btn3.setText("Diet");
         btn3.setTextColor(Color.WHITE);
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
     public void openActivity1(){
         Intent intent1 = new Intent(this, Activity1.class);

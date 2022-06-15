@@ -4,12 +4,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity4">
+    tools:context=".Activity4"
+    android:background="#F3DAE4">
 
     <TextView
-        android:layout_width="172dp"
-        android:layout_height="138dp"
-        android:text="Activity4"
-        android:textSize="35sp" />
+        android:id="@+id/txtCC"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="#40ffffff"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/txtAge"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtCC"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:paddingStart="30dp" />
+
+    <EditText
+        android:id="@+id/inpAge"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtCC"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="18" />
+
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtAge"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:paddingStart="30dp" />
+
+    <EditText
+        android:id="@+id/inpHeightCM"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtAge"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:hint="cm"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/txtSlash1"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtAge"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="/"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/inpHeightFT"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtAge"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:hint="ft"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/txtWeight"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtHeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:paddingStart="30dp" />
+
+    <EditText
+        android:id="@+id/inpWeightKG"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtHeight"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:hint="kg"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/txtSlash2"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtHeight"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="/"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/inpWeightLBS"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtHeight"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:hint="lbs"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtWeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:paddingStart="30dp" />
+
+    <RadioGroup
+        android:layout_below="@id/txtWeight"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/inpMale"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/inpFemale"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtExercise"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtGender"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:paddingStart="30dp" />
+
+    <Spinner
+        android:id="@+id/inpExercise"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtGender"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="50dp"
+        android:spinnerMode="dropdown"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <android.widget.Button
+        android:id="@+id/calCalorie"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/txtExercise"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button1"
+        android:text="Calculate"
+        android:textColor="#ffff"
+        android:textSize="25dp" />
+
 
 </RelativeLayout>

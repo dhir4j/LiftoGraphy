@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:background="@drawable/background"
     android:id="@+id/layout1">
@@ -16,17 +17,18 @@
         android:contentDescription="@string/content_description_gym_buddy"
         android:gravity="center" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn1"
-        android:layout_width="290dp"
+        android:layout_width="281dp"
         android:layout_height="70dp"
         android:layout_below="@id/txt1"
         android:layout_marginStart="50dp"
         android:layout_marginTop="70dp"
-        android:backgroundTint="#05384B"
-        android:contentDescription="@string/content_description_weekly_routine" />
+        android:background="@drawable/custom_button2"
+        android:contentDescription="@string/content_description_weekly_routine"
+        app:backgroundTint="@null" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn2"
         android:layout_below="@id/btn1"
         android:layout_marginTop="30dp"
@@ -34,20 +36,20 @@
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
         android:contentDescription="@string/content_description_exercises"
-        android:backgroundTint="#05384B"/>
+        android:background="@drawable/custom_button2"/>
 
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn3"
         android:layout_width="290dp"
         android:layout_height="70dp"
         android:layout_below="@id/btn2"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:backgroundTint="#05384B"
+        android:background="@drawable/custom_button2"
         android:contentDescription="@string/content_description_diet" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn4"
         android:layout_below="@id/btn3"
         android:layout_marginTop="30dp"
@@ -55,6 +57,6 @@
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
         android:contentDescription="@string/content_description_tools"
-        android:backgroundTint="#05384B"/>
+        android:background="@drawable/custom_button2"/>
 
 </RelativeLayout>
