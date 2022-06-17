@@ -6,9 +6,9 @@
     <string name="content_description_weekly_routine">Weekly Routine</string>
     <string name="content_description_gym_buddy">Gym Buddy</string>
     <string-array name="exerciseSelect">
-        <item>BMR</item>
-        <item>3–4 times(Week)</item>
-        <item>4–6 times(Week)</item>
-        <item>6-7 times(Week)</item>
+        <item>BMR: Basal Metabolic Rate</item>
+        <item>Light: 3–4 times(Week)</item>
+        <item>Moderate: 4–6 times(Week)</item>
+        <item>Intense: 6-7 times(Week)</item>
     </string-array>
 </resources>
