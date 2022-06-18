@@ -172,7 +172,6 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/bg_spinner"
         android:spinnerMode="dropdown"
-        android:textColor="#0E0000"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <android.widget.Button
@@ -184,6 +183,5 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/custom_button1"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
 
 </RelativeLayout>

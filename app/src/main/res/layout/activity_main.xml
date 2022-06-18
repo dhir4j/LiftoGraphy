@@ -30,13 +30,13 @@
 
     <android.widget.Button
         android:id="@+id/btn2"
-        android:layout_below="@id/btn1"
-        android:layout_marginTop="30dp"
         android:layout_width="290dp"
         android:layout_height="70dp"
+        android:layout_below="@id/btn1"
         android:layout_marginStart="50dp"
-        android:contentDescription="@string/content_description_exercises"
-        android:background="@drawable/custom_button2"/>
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button2"
+        android:contentDescription="@string/content_description_exercises" />
 
 
     <android.widget.Button
@@ -44,19 +44,19 @@
         android:layout_width="290dp"
         android:layout_height="70dp"
         android:layout_below="@id/btn2"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/custom_button2"
         android:contentDescription="@string/content_description_diet" />
 
     <android.widget.Button
         android:id="@+id/btn4"
-        android:layout_below="@id/btn3"
-        android:layout_marginTop="30dp"
         android:layout_width="290dp"
         android:layout_height="70dp"
+        android:layout_below="@id/btn3"
         android:layout_marginStart="50dp"
-        android:contentDescription="@string/content_description_tools"
-        android:background="@drawable/custom_button2"/>
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button2"
+        android:contentDescription="@string/content_description_tools" />
 
 </RelativeLayout>
