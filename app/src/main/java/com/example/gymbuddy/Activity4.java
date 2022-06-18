@@ -10,6 +10,9 @@ import android.widget.*;
 
 public class Activity4 extends AppCompatActivity {
 
+    String[] exercises = { "BMR: Basal Metabolic Rate", "Light: 1-3 Days/Week", "Moderate: 3-5 Days/Week", "Intense: 6-7 Days/Week"};
+    public static double mulBmr = 1;
+    public static String valBmr = "dhir4j";
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +29,12 @@ public class Activity4 extends AppCompatActivity {
         Button calCalorie = findViewById(R.id.calCalorie);
 
         EditText inpAge = findViewById(R.id.inpAge);
-        EditText inpHeightCM = findViewById(R.id.inpHeightCM);
-        EditText inpHeightFT = findViewById(R.id.inpHeightFT);
-        EditText inpWeightKG = findViewById(R.id.inpWeightKG);
-        EditText inpWeightLBS = findViewById(R.id.inpWeightLBS);
+        EditText inpHeight = findViewById(R.id.inpHeight);
+        EditText inpWeight = findViewById(R.id.inpWeight);
         RadioButton inpMale = findViewById(R.id.inpMale);
         RadioButton inpFemale = findViewById(R.id.inpFemale);
 
-        txt1.setText("Calorie Requirement");
+        txt1.setText("Calorie Calculator");
         txt1.setTextSize(30);
         txt1.setTextColor(Color.BLACK);
 
@@ -57,20 +58,11 @@ public class Activity4 extends AppCompatActivity {
         txtExercise.setTextSize(20);
         txtExercise.setTextColor(Color.BLACK);
 
-
-        ArrayAdapter<String> myAdapter=new ArrayAdapter<>(Activity4.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.exerciseSelect));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        inpExercise.setAdapter(myAdapter);
-
         inpAge.setHint("Years");
 
-        inpHeightCM.setHint("Cm");
+        inpHeight.setHint("Cm");
 
-        inpHeightFT.setHint("Ft");
-
-        inpWeightKG.setHint("Kg");
-
-        inpWeightLBS.setHint("Lbs");
+        inpWeight.setHint("Kg");
 
         inpMale.setText("Male");
         inpMale.setTextSize(15);
@@ -81,19 +73,80 @@ public class Activity4 extends AppCompatActivity {
         calCalorie.setText("Calculate");
         calCalorie.setTextSize(20);
 
+
+        //Spinner or DropDown list
+        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item,exercises);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inpExercise.setAdapter(aa);
+
+        inpExercise.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg, View view, int position, long id) {
+                if (arg.getItemAtPosition(position) == exercises[0]){
+                    mulBmr = 1;
+                    valBmr = exercises[0];
+                }
+                else if (arg.getItemAtPosition(position) == exercises[1]){
+                    mulBmr = 1.375;
+                    valBmr = exercises[1];
+                }
+                else if (arg.getItemAtPosition(position) == exercises[2]){
+                    mulBmr = 1.47;
+                    valBmr = exercises[2];
+                }
+                else {
+                    mulBmr = 1.725;
+                    valBmr = exercises[3];
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        //On Calculate Button Click
         calCalorie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double age = Double.parseDouble(inpAge.getText().toString());
-                double heightcm = Double.parseDouble(inpHeightCM.getText().toString());
-                double weightkg = Double.parseDouble(inpWeightKG.getText().toString());
-                double BMR;
+                if (inpAge.getText().toString().trim().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter Age", Toast.LENGTH_SHORT).show();
+                }
+                else if (inpHeight.getText().toString().trim().length() <= 0){
+                    Toast.makeText(getApplicationContext(), "Enter Height", Toast.LENGTH_SHORT).show();
+                }
+                else if (inpWeight.getText().toString().trim().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter Weight", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    if (inpMale.isChecked()) {
+                        double age = Double.parseDouble(inpAge.getText().toString());
+                        double height = Double.parseDouble(inpHeight.getText().toString());
+                        double weight = Double.parseDouble(inpWeight.getText().toString());
+                        double BMR;
+                        BMR = ((10 * weight) + (6.25 * height) - (5 * age) + 5);
+                        BMR = BMR * mulBmr;
+                        int bmrInt = ((int) BMR);
+                        String bmr = String.valueOf(bmrInt);
+                        Toast.makeText(getApplicationContext(),valBmr +" = "+ bmr, Toast.LENGTH_SHORT).show();
 
-                //BMR = (88.362 + (13.397* weightkg) + (4.799 *heightcm) -(5.677*age));
-                BMR = ((10* weightkg) + (6.25 *heightcm) -(5*age) + 5);
-                int bmrInt = ((int) BMR);
-                String bmr = String.valueOf(bmrInt);
-                txt1.setText(bmr);
+
+                    } else if (inpFemale.isChecked()) {
+                        double age = Double.parseDouble(inpAge.getText().toString());
+                        double heightcm = Double.parseDouble(inpHeight.getText().toString());
+                        double weightkg = Double.parseDouble(inpWeight.getText().toString());
+                        double BMR;
+                        BMR = ((10 * weightkg) + (6.25 * heightcm) - (5 * age) - 161);
+                        BMR = BMR * mulBmr;
+                        int bmrInt = ((int) BMR);
+                        String bmr = String.valueOf(bmrInt);
+                        Toast.makeText(getApplicationContext(),valBmr +" = "+ bmr, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Gender Not Selected", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
             }
         });
 

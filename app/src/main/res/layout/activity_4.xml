@@ -21,7 +21,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txtCC"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:paddingStart="30dp" />
 
     <EditText
@@ -30,7 +30,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txtCC"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bg_input1"
         android:gravity="center"
         android:inputType="numberDecimal"
@@ -46,8 +46,8 @@
         android:paddingStart="30dp" />
 
     <EditText
-        android:id="@+id/inpHeightCM"
-        android:layout_width="70dp"
+        android:id="@+id/inpHeight"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@+id/txtAge"
         android:layout_marginStart="220dp"
@@ -56,30 +56,6 @@
         android:gravity="center"
         android:inputType="numberDecimal"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/txtSlash1"
-        android:layout_width="10dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/txtAge"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text="/"
-        android:textSize="30dp" />
-
-    <EditText
-        android:id="@+id/inpHeightFT"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/txtAge"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg_input1"
-        android:gravity="center"
-        android:inputType="numberDecimal"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
         android:id="@+id/txtWeight"
         android:layout_width="175dp"
@@ -90,8 +66,8 @@
         android:paddingStart="30dp" />
 
     <EditText
-        android:id="@+id/inpWeightKG"
-        android:layout_width="70dp"
+        android:id="@+id/inpWeight"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@+id/txtHeight"
         android:layout_marginStart="220dp"
@@ -101,28 +77,6 @@
         android:inputType="numberDecimal"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txtSlash2"
-        android:layout_width="10dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/txtHeight"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text="/"
-        android:textSize="30dp" />
-
-    <EditText
-        android:id="@+id/inpWeightLBS"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/txtHeight"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg_input1"
-        android:gravity="center"
-        android:inputType="numberDecimal"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtGender"
@@ -156,7 +110,7 @@
 
     <TextView
         android:id="@+id/txtExercise"
-        android:layout_width="150dp"
+        android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_below="@+id/txtGender"
         android:layout_marginStart="20dp"
@@ -165,10 +119,10 @@
 
     <Spinner
         android:id="@+id/inpExercise"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_below="@+id/txtGender"
-        android:layout_marginStart="175dp"
+        android:layout_marginStart="155dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/bg_spinner"
         android:spinnerMode="dropdown"
