@@ -1,7 +1,6 @@
 # Gym Buddy
 > In Development Phase...
-> Will try my best to build this application ASAP.
->~ @dhir4j ( Head Dev )
+
 ### Description
 Gym Buddy is a Android Application, Which Aims to Help and Guide you in your Workout.
 
